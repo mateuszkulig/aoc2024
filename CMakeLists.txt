@@ -1,0 +1,9 @@
+# CMake setup
+cmake_minimum_required(VERSION 3.16)
+project(aoc_2024 VERSION 1.0.0)
+
+# Includes
+include_directories(src)
+
+# Sources
+add_executable(day1 src/day1/day1.c)
