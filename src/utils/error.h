@@ -4,7 +4,8 @@
 typedef enum errorCode {
     errOK = 0,              // Operation succeeded
     errFileNotOpened = 1,   // File pointer is set to NULL
-    errBufferOverflow = 2   // Supplied buffer is too small for data
+    errFileEnd = 2,         // File read started at the EOF
+    errBufferOverflow = 3,  // Supplied buffer is too small for data
 } errorCode;
 
 #endif
