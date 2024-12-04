@@ -31,7 +31,6 @@ int main(int argc, char **argv) {
     int         puzzleLevels[inputMaxLineNumbers];
     int         puzzleReportSize;
     int         safeCount = 0;
-    int         tempLast;
     int         difference;
     int         isSafe;
     bool        increasing;
@@ -95,8 +94,6 @@ int main(int argc, char **argv) {
                 isSafe = 0;
                 break;
             }
-
-            tempLast = puzzleLevels[current];
         }
 
         safeCount += isSafe;
