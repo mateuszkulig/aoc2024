@@ -31,8 +31,18 @@ errorCode readWord(FILE *file, char *buffer, uint32_t bufferSize);
  * 
  * @param file Poiter to file
  * @param buffer Buffer for read integer
- * @return errorCode 
+ * @return errorCode One of codes from error.h
  */
 errorCode readInt32(FILE *file, int32_t *buffer);
+
+/**
+ * @brief Read single character, that is one index behind current stream pointer. File must
+ *        be opened before calling that function
+ * 
+ * @param file Pointer to file
+ * @param buffer Buffer for read char
+ * @return errorCode One of codes from error.h
+ */
+errorCode readLastChar(FILE *file, char *buffer);
 
 #endif

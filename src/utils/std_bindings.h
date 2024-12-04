@@ -9,6 +9,8 @@
  * 
  */
 #define getCharFromFile(filePointer) fgetc(filePointer)
+#define getPositionFromFile(filePointer) ftell(filePointer)
+#define setPositionInFile(filePointer, newPosition, relativeTo) fseek(filePointer, newPosition, relativeTo)
 #define convertStringToInt(str) atoi(str)
 
 #endif

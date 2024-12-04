@@ -57,3 +57,23 @@ errorCode readInt32(FILE *file, int32_t *buffer) {
 
     return errOK;
 }
+
+
+errorCode readLastChar(FILE *file, char *buffer) {
+    int64_t position;
+
+    position = getPositionFromFile(file);
+    // File stream is at its first character
+    if (position == 0) {
+        return errFileStart;
+    }
+
+    // Previous character is at current position - 1 character
+    if (setPositionInFile(file, position-1, SEEK_SET)) {
+        return errFileSeekFailed;
+    }
+
+    *buffer = getCharFromFile(file);
+
+    return errOK;
+}
